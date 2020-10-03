@@ -1,0 +1,16 @@
+<app-cabecera titulo="Pagina 2"></app-cabecera>
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>pagina2</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-content>
+  <ion-text>{{ nombre }}</ion-text>
+  <ion-button expand="full" [disabled]="isDisabled">Haz click</ion-button>
+  <ion-input [(ngModel)]="apellido">{{apellido}}</ion-input>
+
+</ion-content>
