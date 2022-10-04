@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Pagina2Page implements OnInit {
 
-  private nombre = 'Yolanda';
-  private apellido = 'Moreno';
-  private isDisabled = false;
+  nombre = 'Yolanda';
+  apellido = 'Moreno';
+  isDisabled = false;
 
   constructor() { }
 

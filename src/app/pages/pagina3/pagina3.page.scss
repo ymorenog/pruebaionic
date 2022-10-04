@@ -1,5 +1,9 @@
-.estilo-boton { 
-   margin-top: 10px; 
+.estilo-boton {
+   margin-top: 10px;
    font-size: 15pt;
    font-family:'Lucida Sans';
+   background-color: var(--ion-color-micolor);
+   width: 100%;
+   height: 50px;
+   color: white;
 }

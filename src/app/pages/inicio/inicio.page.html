@@ -5,10 +5,33 @@
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="/pagina2" expand="block">
+  <ion-list>
+    <ion-item *ngFor="let e of paginas" [routerLink]="e.rutaURL" detail>
+      <ion-icon [name]="e.icono" slot="start"></ion-icon>
+      <ion-label>{{ e.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button *ngIf="mostrar else bloqueElse" class="miestilo" routerLink="/pagina2" expand="block">
     Pagina 2
   </ion-button>
+  <ng-template #bloqueElse>Texto en lugar de botón</ng-template>
+  
   <ion-button (click)="irPagina3()" color="secondary" expand="full">
     Pagina 3
   </ion-button>
+  <a href="url">enlace</a>
+
+  <p>{{nombre}}</p>
+  <br><br>
+  <p><input type="text" name="nombreSitio" id="nombreSitio" placeholder="Nombre Sitio" [(ngModel)]="nombreSitioU"></p>
+  <p><input type="text" name="urlSitio" id="urlSitio" placeholder="URL Sitio" [(ngModel)]="urlSitioU"></p>
+  <br>
+  <ion-button type="submit" color="primary" (click)="insertarSitio()">Insertar Sitio</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let s of sitiosWeb">
+      <ion-label>{{s.nombreSitio}}  -  {{s.urlSitio}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
